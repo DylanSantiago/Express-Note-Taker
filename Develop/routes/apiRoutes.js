@@ -11,7 +11,7 @@ const {
 
 // GET Route for retrieving all the notes
 router.get('/', (req, res) => {
-    readFromFile('./db/tips.json').then((data) => res.json(JSON.parse(data)));
+    readFromFile('./db/db.json').then((data) => res.json(JSON.parse(data)));
 });
 
 // GET Route for a specific note
