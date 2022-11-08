@@ -1,3 +1,5 @@
+// Helper code from Mini Project 
+
 const fs = require('fs');
 const util = require('util');
 

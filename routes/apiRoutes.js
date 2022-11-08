@@ -1,8 +1,8 @@
 const router = require('express').Router();
 const fs = require('fs');
-const path = require('path');
 const { v4: uuidv4 } = require('uuid');
 
+// Helper Code
 const {
     readFromFile,
     readAndAppend,
@@ -41,25 +41,25 @@ router.post('/', (req, res) => {
       };
   
       readAndAppend(newNote, './db/db.json');
-      res.json(`Note added successfully 🚀`);
+      res.json(`Note created!`);
     } else {
       res.error('Error in creating note');
     }
 });
 
-// DELETE Route for a specific tip
+// DELETE Route for a specific note
 router.delete('/:id', (req, res) => {
     const noteId = req.params.id;
     readFromFile('./db/db.json')
       .then((data) => JSON.parse(data))
       .then((json) => {
-        // Make a new array of all tips except the one with the ID provided in the URL
+        // Makes a new array of all notes except the one with the ID provided in the URL
         const result = json.filter((note) => note.id !== noteId);
   
-        // Save that array to the filesystem
+        // Saves that array to the filesystem
         writeToFile('./db/db.json', result);
   
-        // Respond to the DELETE request
+        // Response to the DELETE request
         res.json("Note has been deleted");
     });
 });
