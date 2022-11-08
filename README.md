@@ -22,4 +22,4 @@ After installation, all that is neccesary is be in the correct path in your comm
 <img width="882" alt="Screen Shot 2022-11-08 at 4 19 53 PM" src="https://user-images.githubusercontent.com/107218398/200678236-c49bd1b4-08b4-4d35-aed7-5704e56fffe0.png">
 
 ## Deployed Link
-https://my-express-notepad.herokuapp.com/notes
+https://my-express-notepad.herokuapp.com
